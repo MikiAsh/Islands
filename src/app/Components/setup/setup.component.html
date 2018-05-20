@@ -1,0 +1,10 @@
+<div class="pane">
+  <h3>Please enter bitmap size:</h3>
+  <div>
+    <input type="text" placeholder="Bitmap size: n, m" class="input-size" (blur)="userInput = $event.target.value" />
+  </div>
+
+  <div>
+    <input type="button" value="RANDOMIZE" (click)="generateMatrix()"/>
+  </div>
+</div>

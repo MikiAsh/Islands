@@ -1,0 +1,20 @@
+<div class="pane" infiniteScroll
+infiniteScroll
+[infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="50"
+(scrolled)="onScroll()">
+  <table>
+    <tr *ngFor="let row of array; let rowIndex = index">
+      <td *ngFor="let col of array[rowIndex].cells; let colIndex = index" 
+          [attr.id]="assignId(rowIndex, colIndex)" 
+          [style.background-color]="array[rowIndex].cells[colIndex].color">
+        &nbsp;
+      </td>
+    </tr>
+  </table>
+
+  <div *ngIf="solution !== null" class="solution">found {{solution}} islands!</div>
+  <div>
+    <input type="button" value="SOLVE" (click)="solve()" *ngIf="diplaySolveButton" />
+  </div>
+</div>

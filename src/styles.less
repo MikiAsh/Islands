@@ -1,0 +1,59 @@
+@import (less) "parameters.less";
+
+//layout
+.layout-container {
+    height: 100vh;
+}
+
+.setup-pane {
+    background-color: rgb(241, 234, 235);
+    display: inline-block;
+    width: 20%;
+    height: 100vh;
+}
+
+.main-pane {
+    float: right;
+    width: 80%;
+    height: 100vh;    
+}
+
+.pane {
+    padding: 15px;
+}
+
+// style
+
+.input-size {
+    width: 130px;
+}
+
+table {  
+        border-collapse: collapse;
+        border: 1px solid @text-color-grid;
+        table-layout: fixed;
+}
+
+td {
+    border: 1px solid @text-color-grid;
+    width: @size-grid-cell;
+    height: @size-grid-cell;
+}
+
+input[type="button"] {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #43D1AF;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+
+input[type="button"]:hover {
+    background: #2EBC99;
+}
